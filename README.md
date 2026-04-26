@@ -1,79 +1,87 @@
 # 🛒 E-Commerce Analytics using MySQL
 
-## 📌 Project Overview
+📌 Project Overview
 
-This project is a MySQL-based e-commerce database designed to analyze customer behavior, product performance, revenue, and order trends. It simulates a real-world online store and extracts meaningful business insights using SQL queries.
+This project simulates a real-world e-commerce analytics database using MySQL. It focuses on extracting meaningful business insights related to customer behavior, product performance, revenue trends, and order cancellations.
 
----
 
-## 🧱 Database Structure
+🎯 Business Objectives
 
-The project consists of the following tables:
+Identify high-value customers
+Analyze product performance
+Track revenue trends over time
+Detect operational issues through cancellations
 
-* **customers** – stores customer details
-* **products** – stores product information
-* **orders** – stores order details
-* **order_items** – stores product-level order data
-* **payments** – stores payment information
 
----
+🧱 Database Schema
 
-## 🔍 Key Analysis Performed
+The project uses a relational database with the following tables:
+  customers – Customer information
+  products – Product details and pricing
+  orders – Order transactions and status
+  order_items – Product-level order data
+  payments – Payment transactions
 
-### 👤 Top Customers by Spend
+  
+🔍 Key Analysis
 
-Identified customers who contributed the most revenue using joins and aggregations.
+👤 Top Customers by Spend
+Identified customers contributing the highest revenue
+Calculated using joins and aggregation functions
 
-### 🏆 Best-Selling Products
+🏆 Best-Selling Products
+Determined top products based on total quantity sold
+Helps understand customer demand
 
-Analyzed product popularity based on total quantity sold.
+💰 Revenue by Product
+Calculated revenue using price × quantity
+Ranked products using RANK() window function
 
-### 💰 Revenue by Product
+📅 Monthly Revenue Trend
+Analyzed revenue trends using DATE_FORMAT()
+Helps identify growth patterns and seasonality
 
-Calculated revenue contribution of each product and ranked them using window functions.
+❌ Order Cancellation Analysis
+Calculated total cancelled orders
+Measured cancellation percentage
 
-### 📅 Monthly Revenue
+🌍 Cancellation by City
+Identified cities with the highest cancellations
+Useful for detecting operational issues
 
-Tracked revenue trends over time using date-based grouping.
+📊 Key Insights
+A small number of customers generate a large portion of revenue
+Top products significantly impact total sales
+Revenue trends fluctuate monthly
+High cancellations may indicate logistics or service issues
 
-### ❌ Cancelled Orders Analysis
+🛠️ SQL Skills Used
+Joins (INNER JOIN)
+Aggregations (SUM, COUNT)
+GROUP BY & ORDER BY
+Window Functions (RANK)
+Date Functions (DATE_FORMAT)
+Filtering (WHERE clause)
+Relational Database Design
 
-Calculated total cancelled orders and cancellation percentage to evaluate business performance.
+💻 Tools
+MySQL
+MySQL Workbench
 
-### 🌍 Cancelled Orders by City
+📂 Project Structure
+ecommerce-analytics/
+│
+├── schema.sql      # Table creation scripts
+├── data.sql        # Sample data
+├── analysis.sql    # Business queries
+└── README.md
 
-Identified cities with the highest cancellation rates.
+🚀 Project Outcome
+This project demonstrates the ability to:
+  Work with structured relational data
+  Write optimized SQL queries
+  Generate business insights from raw data
 
----
-
-## 🛠️ SQL Concepts Used
-
-* Joins (INNER JOIN)
-* Aggregations (`SUM`, `COUNT`)
-* GROUP BY & ORDER BY
-* Window Functions (`RANK()`)
-* Date Functions (`DATE_FORMAT`)
-* Filtering with `WHERE`
-* Foreign Keys & Relational Design
-
----
-
-## 📊 Sample Insight
-
-* Top customer identified based on total spending
-* Revenue calculated using only **delivered orders** for accuracy
-* Cancellation rate analyzed to detect operational issues
-
----
-
-## 💻 Tools Used
-
-* MySQL
-* MySQL Workbench
-
----
-
-## 🚀 Project Purpose
 
 The goal of this project is to demonstrate practical SQL skills by solving real-world business problems using structured data and queries.
 
