@@ -1,80 +1,61 @@
-# 🛒 E-Commerce Analytics using MySQL
+# 🛒 E-Commerce Analytics Database Project | MySQL
 
-📌 Project Overview
+## 📌 Project Overview
 
-This project simulates a real-world e-commerce analytics database using MySQL. It focuses on extracting meaningful business insights related to customer behavior, product performance, revenue trends, and order cancellations.
+This project simulates a real-world e-commerce analytics database using MySQL.
 
+The objective of this project is to design a relational database for an e-commerce business and perform business-focused SQL analysis on customers, products, orders, order items, and payments.
 
-🎯 Business Objectives
+The project focuses on extracting meaningful insights related to:
 
-Identify high-value customers
-Analyze product performance
-Track revenue trends over time
-Detect operational issues through cancellations
+- Revenue performance
+- Product performance
+- Customer spending behavior
+- Order cancellations
+- Payment trends
+- City-wise business performance
 
+---
 
-🧱 Database Schema
+## 🎯 Business Objectives
+
+The main business objectives of this project are:
+
+- Identify high-value customers
+- Analyze best-selling products
+- Calculate revenue by product and category
+- Track monthly revenue trends
+- Analyze cancelled orders
+- Calculate cancellation rate
+- Identify cities with high cancellations
+- Analyze payment mode performance
+- Identify low-stock products
+- Rank customers based on spending
+
+---
+
+## 🧱 Database Schema
 
 The project uses a relational database with the following tables:
-  customers – Customer information
-  products – Product details and pricing
-  orders – Order transactions and status
-  order_items – Product-level order data
-  payments – Payment transactions
 
-  
-🔍 Key Analysis
+| Table | Description |
+|---|---|
+| customers | Stores customer details such as name, email, city, and signup date |
+| products | Stores product details such as product name, category, price, and stock |
+| orders | Stores order details such as customer ID, order date, and order status |
+| order_items | Stores product-level order details such as product ID and quantity |
+| payments | Stores payment details such as payment mode, amount, and payment date |
 
-👤 Top Customers by Spend
-Identified customers contributing the highest revenue
-Calculated using joins and aggregation functions
+---
 
-🏆 Best-Selling Products
-Determined top products based on total quantity sold
-Helps understand customer demand
+## 📂 Project Structure
 
-💰 Revenue by Product
-Calculated revenue using price × quantity
-Ranked products using RANK() window function
-
-📅 Monthly Revenue Trend
-Analyzed revenue trends using DATE_FORMAT()
-Helps identify growth patterns and seasonality
-
-❌ Order Cancellation Analysis
-Calculated total cancelled orders
-Measured cancellation percentage
-
-🌍 Cancellation by City
-Identified cities with the highest cancellations
-Useful for detecting operational issues
-
-📊 Key Insights
-A small number of customers generate a large portion of revenue
-Top products significantly impact total sales
-Revenue trends fluctuate monthly
-High cancellations may indicate logistics or service issues
-
-🛠️ SQL Skills Used
-Joins (INNER JOIN)
-Aggregations (SUM, COUNT)
-GROUP BY & ORDER BY
-Window Functions (RANK)
-Date Functions (DATE_FORMAT)
-Filtering (WHERE clause)
-Relational Database Design
-
-💻 Tools
-MySQL
-MySQL Workbench
-
-📂 Project Structure
-ecommerce-analytics/
+```text
+ecommerce-mysql-project/
 │
-├── schema.sql      # Table creation scripts
-├── data.sql        # Sample data
-├── analysis.sql    # Business queries
+├── ecommerce_mysql_project_complete.sql
 └── README.md
+```
 
 🚀 Project Outcome
 This project demonstrates the ability to:
